@@ -1,23 +1,49 @@
-/*add color and style to the website*/
+/*adding image to the right top*/
+header{
+    min-height: 50px;
+    background-image: url(LogoSmall.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+     }
+  @media (min-width:768px){
+    header{
+      background-image: url(LogoLarge.png);
+      min-height: 100px;
+    }
+  }
+ 
+    
+
+  /*add color and style to the website*/
 body  {
-   background-color: peru; /*default screen background color*/
-   color:bisque;
-   font-family: Arial, sans-serif;
+    background-color: peru; /*default screen background color*/
+    color:bisque;
+    font-family: Arial, sans-serif;
+    
+   }
+   
+ main {
+    background-color: saddlebrown;
+    color: gainsboro;
+ }
+ /*media quiery for larger screens, for width over 750px*/
+ 
+ @media screen and (min-width: 750px)  {
+   body{ 
+     background-color: maroon; /*background color for larger screens*/
+     color:moccasin; /*font color for larger screens*/
+ }
+ h1, h2, h3, h4 {
+     font-family: 'Georgia', 'Times New Roman', serif;
+ 
+ }
+ body {
+  .Responsive {
+    width: 100%; /* Ensures responsive images take full width of container */
+    height: auto; /* Maintains aspect ratio */
+   }
+ }
+ 
+ }
 
-}
-main {
-   background-color: saddlebrown;
-   color: gainsboro;
-}
-/*media quiery for larger screens, for width over 750px*/
-
-@media screen and (min-width: 750px)  {
-  body{ 
-    background-color: maroon; /*background color for larger screens*/
-    color:moccasin; /*font color for larger screens*/
-}
-h1, h2, h3, h4 {
-    font-family: 'Georgia', 'Times New Roman', serif;
-
-}
-}
+ 
