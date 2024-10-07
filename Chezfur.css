@@ -1,49 +1,114 @@
-/*adding image to the right top*/
-header{
-    min-height: 50px;
-    background-image: url(LogoSmall.png);
-    background-position: right top;
-    background-repeat: no-repeat;
-     }
-  @media (min-width:768px){
-    header{
+/* Add image to the right top */
+header {
+  min-height: 50px;
+  background-image: url(LogoSmall.png);
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+/* Style the navigation links*/
+nav a {
+  color: #6b0080; /* color for links */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the links bold */
+  padding: 10px;
+  display: inline-block;
+}
+
+/* Pseudo-class for hovered links */
+nav a:hover {
+  color: #FF6347; /* Changes color when the link is hovered */
+  font-size: 1.1em; /* Slightly increase font size when hovered */
+  background-color: #E0E0E0; /* Add background color on hover */
+}
+
+/* Make images responsive */
+.Responsive {
+  width: 100%; /* Ensures responsive images take full width of container */
+  height: auto; /* Maintains aspect ratio */
+}
+.Aside {
+  background-color: #CCCC99;
+  color:#334eff96
+}
+dt {
+  font-weight: bold; /* Makes the dt element bold */
+}
+
+dd {
+  font-style: italic; /* Makes the dd element italic */
+}
+/* Style for cat figure images */
+figure {
+  text-align: center; /* Centers the figure block */
+}
+
+figure img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Makes the image a circle */
+  object-fit: cover; /* Ensures the image stays within the circle */
+}
+
+figcaption {
+  font-weight: bold; /* Makes the caption bold */
+  text-align: center; /* Centers the caption */
+  margin-top: 10px; /* Adds some space between the image and caption */
+}
+.menu-title {
+  font-family: "Comic Sans MS", "Comic Sans", cursive; /* Cursive font */
+  text-align: center; /* Center the text */
+  color: #8a2b8a; /* color styling */
+}
+.allergy-info {
+font-family: monospace;
+}
+.menu-section{
+  background-color: #ffb6c1;
+  color:#000000;
+  width: 80%;
+  padding: 20px;
+  margin: 0 aut0;
+}
+.images-cat{
+ border-radius: 10px;
+ background-color: #FF3399;
+ width: 90%;
+}
+/* Add color and style to the website */
+main {
+  background-color: #e6f0f8; /*color ratio is 4.49:1 */
+  color: #ff3399;
+}
+
+body {
+  background-color: #e6f0f8; /*  new screen background color */
+  color: #6B6B6B;
+  font-family: Arial, sans-serif;
+}
+
+/* Apply media query for larger screens (min-width: 750px) */
+@media screen and (min-width: 750px) {
+  header {
       background-image: url(LogoLarge.png);
       min-height: 100px;
-    }
   }
- 
-    
+  body {
+      background-color: #CCCC99; /* Background color for larger screens */
+      color: #0000; /* Font color for larger screens */
+  }
+  figure img {
+    width: 180px;
+    height: 180px;
+}
+}
 
-  /*add color and style to the website*/
-body  {
-    background-color: peru; /*default screen background color*/
-    color:bisque;
-    font-family: Arial, sans-serif;
-    
-   }
-   
- main {
-    background-color: saddlebrown;
-    color: gainsboro;
- }
- /*media quiery for larger screens, for width over 750px*/
+/* Heading fonts */
+h1, h2, h3, h4 {
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+
  
- @media screen and (min-width: 750px)  {
-   body{ 
-     background-color: maroon; /*background color for larger screens*/
-     color:moccasin; /*font color for larger screens*/
- }
- h1, h2, h3, h4 {
-     font-family: 'Georgia', 'Times New Roman', serif;
  
- }
- body {
-  .Responsive {
-    width: 100%; /* Ensures responsive images take full width of container */
-    height: auto; /* Maintains aspect ratio */
-   }
- }
- 
- }
 
  
