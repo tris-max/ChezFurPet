@@ -16,10 +16,82 @@ nav a {
 
 /* Pseudo-class for hovered links */
 nav a:hover {
-  color: #FF6347; /* Changes color when the link is hovered */
+  color: #47bfff; /* Changes color when the link is hovered */
   font-size: 1.1em; /* Slightly increase font size when hovered */
   background-color: #E0E0E0; /* Add background color on hover */
 }
+nav ul {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+li {
+  display: inline; /* Remove vertical breaks */
+  margin: 5px; /* Adds space between buttons */
+}
+nav ul li a {
+  padding: 10px 20px; /* Increase padding for navigation buttons */
+  color: white; /* Text color */
+  background-color: #6b0080; /* Background color for the buttons */
+  text-align: center;
+  text-decoration: none;
+}
+/* Apply media query for larger screens (min-width: 750px) */
+@media screen and (min-width: 750px) {
+  .columns-wrapper {
+    display: flex;
+}
+  .column {
+    float: left; /* Floating layout */
+    margin: 10px;
+}
+.left {
+    width: 20%; /* Left column width */
+}
+.right {
+    width: 70%; /* Right column width */
+}
+.menu-section {
+    float:right;
+    width: 70%; /* Aligns with the right column */
+}
+.Information {
+  float:left;
+  width:20%;
+}
+  body{
+       background-color: #CCCC99; /* Background color for larger screens */
+       color: #0000; /* Font color for larger screens */
+  }
+   figure img {
+     width: 180px;
+     height: 180px;
+ }
+   nav ul {
+       width: 200px; /* Set width for the vertical column */
+       padding: 0;
+       background-color: #f4f4f4; /* Background color for vertical buttons */
+   }
+   nav ul li {
+       margin-bottom: 10px; /* Adds vertical space between the buttons */
+   }
+   nav ul li a {
+       display: block; /* Makes the links fill the entire width */
+       padding: 20px;
+       background-color: #6b0080; /* Background color for buttons */
+       color: white; /* Text color */
+       text-align: center;
+       text-decoration: none;
+   }
+   nav ul li a:hover {
+       background-color: #FF6347; /* Change color on hover */
+   }
+   header {
+     background-image: url(LogoLarge.png);
+     min-height: 100px;
+ }
+ }
 
 /* Make images responsive */
 .Responsive {
@@ -28,7 +100,11 @@ nav a:hover {
 }
 .Aside {
   background-color: #CCCC99;
-  color:#334eff96
+  color:#334eff96;
+  padding: 10px;
+  border: 2px solid #6b0080; /* Adds a solid border */
+  border-radius: 10px; /* Rounds the corners */
+
 }
 dt {
   font-weight: bold; /* Makes the dt element bold */
@@ -66,8 +142,7 @@ font-family: monospace;
   background-color: #ffb6c1;
   color:#000000;
   width: 80%;
-  padding: 20px;
-  margin: 0 aut0;
+  padding: 10px;
 }
 .images-cat{
  border-radius: 10px;
@@ -86,25 +161,16 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Apply media query for larger screens (min-width: 750px) */
-@media screen and (min-width: 750px) {
-  header {
-      background-image: url(LogoLarge.png);
-      min-height: 100px;
-  }
-  body {
-      background-color: #CCCC99; /* Background color for larger screens */
-      color: #0000; /* Font color for larger screens */
-  }
-  figure img {
-    width: 180px;
-    height: 180px;
-}
-}
-
 /* Heading fonts */
 h1, h2, h3, h4 {
   font-family: 'Georgia', 'Times New Roman', serif;
+}
+footer {
+  clear: both;
+  text-align: center;
+  padding: 10px;
+  background-color: #6b0080;
+  color: white;
 }
 
 
