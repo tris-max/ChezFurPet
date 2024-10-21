@@ -6,12 +6,19 @@ header {
   background-repeat: no-repeat;
 }
 /* Style the navigation links*/
+nav {
+  display:flex; /*enables flex for navigation
+
 nav a {
-  color: #6b0080; /* color for links */
+  background-color: #6b0080; /* color for links */
+  color: white;
   text-decoration: none; /* Remove underline */
   font-weight: bold; /* Make the links bold */
   padding: 10px;
   display: inline-block;
+  width: 100%; /*Set to full width for vertical layout */
+  text-align: center; /*center the text */
+  margin-bottom: 10px; /*Adds space between the buttons */
 }
 
 /* Pseudo-class for hovered links */
@@ -19,16 +26,6 @@ nav a:hover {
   color: #47bfff; /* Changes color when the link is hovered */
   font-size: 1.1em; /* Slightly increase font size when hovered */
   background-color: #E0E0E0; /* Add background color on hover */
-}
-nav ul {
-  list-style-type: none; /* Removes bullet points */
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-li {
-  display: inline; /* Remove vertical breaks */
-  margin: 5px; /* Adds space between buttons */
 }
 nav ul li a {
   padding: 10px 20px; /* Increase padding for navigation buttons */
@@ -41,6 +38,18 @@ nav ul li a {
 @media screen and (min-width: 750px) {
   .columns-wrapper {
     display: flex;
+}
+.container {
+  display:flex;
+  flex-direction: column;
+}
+.navcontainer{
+  display: flex;
+  flex-direction: column; /* Make the navigation vertical */
+  height:100vh; /* Take full vertical height */
+  width: 200px; /*Sidebar width */
+  background-color: #f4f4f4; /* Sets a background for navigation */
+}
 }
   .column {
     float: left; /* Floating layout */
@@ -68,11 +77,6 @@ nav ul li a {
      width: 180px;
      height: 180px;
  }
-   nav ul {
-       width: 200px; /* Set width for the vertical column */
-       padding: 0;
-       background-color: #f4f4f4; /* Background color for vertical buttons */
-   }
    nav ul li {
        margin-bottom: 10px; /* Adds vertical space between the buttons */
    }
@@ -87,11 +91,47 @@ nav ul li a {
    nav ul li a:hover {
        background-color: #FF6347; /* Change color on hover */
    }
+   .navcontainer {
+   display: flex;
+   flex-direction: row; /* Horizontal navigation */
+    justify-content: space-evenly; /* Evenly space items */
+   height: 100vh; /* Navigation container takes full height */
+   width: 200px; /* Optional: set width for the navigation */
+   background-color: #f4f4f4;
+  }
+
+ main {
+   height: 100vh; /* Main content also takes full height */
+   flex-grow:1;
+   overflow-y: scroll; /* Enable scrolling if content exceeds screen */
+ }
    header {
      background-image: url(LogoLarge.png);
      min-height: 100px;
  }
+ .container{
+  display: flex;
+  flex-direction: column; /*stack nav and main vertically */
  }
+ .imgcontainer {
+  display: flex;  
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+.imgcontainer img{
+    border-radius: 10px; /* Optional: Round the corners of images */
+}
+
+ .navcontainer {
+  display: flex;
+  flex-direction: row; /* Horizontal navigation */
+  justify-content: space-evenly; /* Evenly space items */
+  width: 100%; /* Full-width on small screens */
+  height:auto;
+  background-color: #f4f4f4;
+}
 
 /* Make images responsive */
 .Responsive {
@@ -153,12 +193,31 @@ font-family: monospace;
 main {
   background-color: #e6f0f8; /*color ratio is 4.49:1 */
   color: #ff3399;
+  height:auto;
+  overflow:visible;
 }
 
 body {
   background-color: #e6f0f8; /*  new screen background color */
   color: #6B6B6B;
   font-family: Arial, sans-serif;
+}
+/* Flexbox for the gallery of cats */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.gallery figure {
+  margin: 10px;
+  text-align: center;
+}
+
+.gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
 }
 
 /* Heading fonts */
