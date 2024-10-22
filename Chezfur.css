@@ -7,9 +7,12 @@ header {
 }
 /* Style the navigation links*/
 nav {
-  display:flex; /*enables flex for navigation
+  display:flex; /*enables flex for navigation */
+  flex-direction: row;
+}  
 
 nav a {
+  flex-direction: row;
   background-color: #6b0080; /* color for links */
   color: white;
   text-decoration: none; /* Remove underline */
@@ -34,175 +37,90 @@ nav ul li a {
   text-align: center;
   text-decoration: none;
 }
-/* Apply media query for larger screens (min-width: 750px) */
-@media screen and (min-width: 750px) {
-  .columns-wrapper {
-    display: flex;
-}
-.container {
-  display:flex;
-  flex-direction: column;
-}
-.navcontainer{
+.layout-container {
   display: flex;
-  flex-direction: column; /* Make the navigation vertical */
-  height:100vh; /* Take full vertical height */
-  width: 200px; /*Sidebar width */
-  background-color: #f4f4f4; /* Sets a background for navigation */
+  flex-direction: column;
+  height: 100vh; /* Takes full screen height */
 }
+.column-right{
+  float:right;
 }
-  .column {
-    float: left; /* Floating layout */
-    margin: 10px;
+.column {
+  float: left; /* Floating layout */
+  margin: 10px;
 }
 .left {
-    width: 20%; /* Left column width */
+  width: 20%; /* Left column width */
 }
 .right {
-    width: 70%; /* Right column width */
+  width: 70%; /* Right column width */
 }
 .menu-section {
-    float:right;
-    width: 70%; /* Aligns with the right column */
+  float:right;
+  width: 70%; /* Aligns with the right column */
 }
 .Information {
-  float:left;
-  width:20%;
+float:left;
+width:20%;
 }
-  body{
-       background-color: #CCCC99; /* Background color for larger screens */
-       color: #0000; /* Font color for larger screens */
-  }
-   figure img {
-     width: 180px;
-     height: 180px;
- }
-   nav ul li {
-       margin-bottom: 10px; /* Adds vertical space between the buttons */
-   }
-   nav ul li a {
-       display: block; /* Makes the links fill the entire width */
-       padding: 20px;
-       background-color: #6b0080; /* Background color for buttons */
-       color: white; /* Text color */
-       text-align: center;
-       text-decoration: none;
-   }
-   nav ul li a:hover {
-       background-color: #FF6347; /* Change color on hover */
-   }
-   .navcontainer {
-   display: flex;
-   flex-direction: row; /* Horizontal navigation */
-    justify-content: space-evenly; /* Evenly space items */
-   height: 100vh; /* Navigation container takes full height */
-   width: 200px; /* Optional: set width for the navigation */
-   background-color: #f4f4f4;
-  }
-
- main {
-   height: 100vh; /* Main content also takes full height */
-   flex-grow:1;
-   overflow-y: scroll; /* Enable scrolling if content exceeds screen */
- }
-   header {
-     background-image: url(LogoLarge.png);
-     min-height: 100px;
- }
- .container{
-  display: flex;
-  flex-direction: column; /*stack nav and main vertically */
- }
- .imgcontainer {
-  display: flex;  
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
+body{
+     background-color: #CCCC99; /* Background color for larger screens */
+     color: #0000; /* Font color for larger screens */
 }
-.imgcontainer img{
-    border-radius: 10px; /* Optional: Round the corners of images */
+ figure img {
+   width: 180px;
+   height: 180px;
 }
-
+ nav ul li {
+     margin-bottom: 10px; /* Adds vertical space between the buttons */
+ }
+ nav ul li a {
+     display: block; /* Makes the links fill the entire width */
+     padding: 20px;
+     background-color: #6b0080; /* Background color for buttons */
+     color: white; /* Text color */
+     text-align: center;
+     text-decoration: none;
+ }
+ nav ul li a:hover {
+     background-color: #FF6347; /* Change color on hover */
+ }
  .navcontainer {
-  display: flex;
-  flex-direction: row; /* Horizontal navigation */
-  justify-content: space-evenly; /* Evenly space items */
-  width: 100%; /* Full-width on small screens */
-  height:auto;
-  background-color: #f4f4f4;
+ display: flex;
+ flex-direction: row; /* Horizontal navigation */
+ height: 100; /* Navigation container takes full height */
+ width: auto; /* set width for the navigation */
+ background-color: #f4f4f4;
 }
 
-/* Make images responsive */
-.Responsive {
-  width: 100%; /* Ensures responsive images take full width of container */
-  height: auto; /* Maintains aspect ratio */
-}
-.Aside {
-  background-color: #CCCC99;
-  color:#334eff96;
-  padding: 10px;
-  border: 2px solid #6b0080; /* Adds a solid border */
-  border-radius: 10px; /* Rounds the corners */
-
-}
-dt {
-  font-weight: bold; /* Makes the dt element bold */
-}
-
-dd {
-  font-style: italic; /* Makes the dd element italic */
-}
-/* Style for cat figure images */
-figure {
-  text-align: center; /* Centers the figure block */
-}
-
-figure img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%; /* Makes the image a circle */
-  object-fit: cover; /* Ensures the image stays within the circle */
-}
-
-figcaption {
-  font-weight: bold; /* Makes the caption bold */
-  text-align: center; /* Centers the caption */
-  margin-top: 10px; /* Adds some space between the image and caption */
-}
-.menu-title {
-  font-family: "Comic Sans MS", "Comic Sans", cursive; /* Cursive font */
-  text-align: center; /* Center the text */
-  color: #8a2b8a; /* color styling */
-}
-.allergy-info {
-font-family: monospace;
-}
-.menu-section{
-  background-color: #ffb6c1;
-  color:#000000;
-  width: 80%;
-  padding: 10px;
-}
-.images-cat{
- border-radius: 10px;
- background-color: #FF3399;
- width: 90%;
-}
-/* Add color and style to the website */
 main {
-  background-color: #e6f0f8; /*color ratio is 4.49:1 */
-  color: #ff3399;
-  height:auto;
-  overflow:visible;
+ height: 100vh; /* Main content also takes full height */
+ flex-grow:1;
+ overflow-y: scroll; /* Enable scrolling if content exceeds screen */
+}
+ header {
+   background-image: url(LogoLarge.png);
+   min-height: 100px;
+}
+.container{
+display: flex;
+flex-wrap: wrap;
+/* Container for sponsors */
+}
+.sponsor {
+  display: flex;
+  justify-content: center; /* Center the sponsor images */
+  gap: 20px; /* Space between sponsor images */
+  margin-bottom: 20px; /* Add space between sponsors and gallery */
 }
 
-body {
-  background-color: #e6f0f8; /*  new screen background color */
-  color: #6B6B6B;
-  font-family: Arial, sans-serif;
+.sponsor img {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
 }
-/* Flexbox for the gallery of cats */
+
+/* Flexbox for the gallery of cat images */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -210,8 +128,8 @@ body {
 }
 
 .gallery figure {
-  margin: 10px;
   text-align: center;
+  margin: 10px;
 }
 
 .gallery img {
@@ -219,6 +137,142 @@ body {
   height: auto;
   border-radius: 10px;
 }
+/* Make images responsive */
+.Responsive {
+width: 100%; /* Ensures responsive images take full width of container */
+height: auto; /* Maintains aspect ratio */
+}
+.Aside {
+background-color: #CCCC99;
+color:#334eff96;
+padding: 10px;
+border: 2px solid #6b0080; /* Adds a solid border */
+border-radius: 10px; /* Rounds the corners */
+
+}
+dt {
+font-weight: bold; /* Makes the dt element bold */
+}
+
+dd {
+font-style: italic; /* Makes the dd element italic */
+}
+/* Style for cat figure images */
+figure {
+text-align: center; /* Centers the figure block */
+}
+
+figure img {
+width: 80px;
+height: 80px;
+border-radius: 50%; /* Makes the image a circle */
+object-fit: cover; /* Ensures the image stays within the circle */
+}
+
+figcaption {
+font-weight: bold; /* Makes the caption bold */
+text-align: center; /* Centers the caption */
+margin-top: 10px; /* Adds some space between the image and caption */
+}
+.menu-title {
+font-family: "Comic Sans MS", "Comic Sans", cursive; /* Cursive font */
+text-align: center; /* Center the text */
+color: #8a2b8a; /* color styling */
+}
+.allergy-info {
+font-family: monospace;
+}
+.menu-section{
+background-color: #ffb6c1;
+color:#000000;
+width: 80%;
+padding: 10px;
+}
+.images-cat{
+border-radius: 10px;
+background-color: #FF3399;
+width: 90%;
+}
+/* Add color and style to the website */
+main {
+background-color: #e6f0f8; /*color ratio is 4.49:1 */
+color: #ff3399;
+height:auto;
+overflow:visible;
+}
+
+body {
+background-color: #e6f0f8; /*  new screen background color */
+color: #6B6B6B;
+font-family: Arial, sans-serif;
+}
+/* Flexbox for the gallery of cats */
+.gallery {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+
+.gallery figure {
+margin: 10px;
+text-align: center;
+}
+
+.gallery img {
+width: 200px;
+height: auto;
+border-radius: 10px;
+}
+
+/* Apply media query for larger screens (min-width: 750px) */
+@media screen and (min-width: 750px) {
+  .columns-wrapper{
+    display:flex;
+  }
+  .layout-container{
+    display:flex;
+    flex-direction: row;
+    height: 100vh;
+  }
+ .sponsor {
+    display: flex;
+    justify-content: center;  /* Center the sponsor images */
+    gap: 20px; /* Space between the sponsor images */
+    margin-bottom: 20px; /* Space between sponsor section and the gallery */
+  }
+
+  .sponsor img {
+    width: 100px;  /* Ensures consistent size for sponsor images */
+    height: auto;
+    border-radius: 10px;
+  }
+
+  /* Flexbox for the gallery of cat images */
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .gallery img {
+    width: 200px; /* Large size for cat images on larger screens */
+    height: auto;
+    border-radius: 10px;
+  }
+
+ .navcontainer{
+  display: flex;
+  flex-direction: column; /* Make the navigation vertical */
+  height:100vh; /* Take full vertical height */
+  width: 200px; /*Sidebar width */
+  background-color: #f4f4f4; /* Sets a background for navigation */
+ }
+ main {
+  flex-grow: 1; /* Main content takes up remaining space */
+  height: 100vh; /* Full height for main content */
+  overflow-y: auto; /* Enable scrolling for main content */
+ }
+}  
 
 /* Heading fonts */
 h1, h2, h3, h4 {
