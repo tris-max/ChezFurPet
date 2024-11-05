@@ -13,14 +13,12 @@
 	color: rgba(37,33,71,0.62);
 	background-color: rgba(218,218,218,1.00);
 }
-.Section.nav {
-}
+
 body {
-	background-image: url(../../Pictures/Screenshots/background.jpg);
+	background-image: url(background.jpg); /*sets the background image*/
 	color: rgba(0,0,0,1.00);
 }
-.Section.nav #navbar1 {
-}
+
 .paragraph {
 	border-radius: 20px;
 	width: 50%;
@@ -31,9 +29,9 @@ body {
 }
 .paragraph p {
 	background-color: rgba(140,155,172,0.98);
-	text-align: left;
+	text-align: center;
 	overflow-y: visible;
-	width: 50%;
+	width: 80%;
 	border-radius: 20px;
 	padding-left: 5%;
 	padding-right: 5%;
@@ -41,7 +39,10 @@ body {
 	margin-right: 1%;
 	padding-top: 5%;
 	padding-bottom: 5%;
+	clear: none;
+	overflow-x: visible;
 	float: right;
+	height: auto;
 }
 aside {
 	width: 50%;
@@ -51,13 +52,20 @@ body aside h1 {
 	width: 50%;
 	padding-right: 2%;
 	padding-left: 2%;
-	margin-right: 2px;
-	float: left;
+	margin-right: 30%;
+	float: none;
 	font-style: italic;
 	font-size: xx-large;
-	margin-left: 2px;
+	margin-left: 70%;
 	background-color: rgba(128,152,172,1.00);
+	text-align: center;
+	left: 50%;
+	right: 50%;
+	margin-top: 5%;
+	margin-bottom: 3%;
 }
+
+/*properties for footer*/
 body footer p {
 	margin-top: 10px;
 	clear: both;
@@ -67,4 +75,54 @@ body footer p {
 	padding-top: 5px;
 	padding-bottom: 5px;
 	background-color: rgba(42,168,202,1.00);
+}
+
+body img {
+	width: 30%;
+	float: left;
+	height: auto;
+
+}
+/*media query for small screens max width 750px*/
+@media screen and (max-width: 700px){
+body aside h1 {
+	width: 70%;  /*sets the width of aside to 70%*/
+	padding-right: 2%;
+	padding-left: 2%;
+	margin-right: none;
+	float: none;
+	font-style: italic;
+	font-size: large;
+	margin-left: none;
+	background-color: rgba(128,152,172,1.00);
+	text-align: none;
+	left: none;
+	right: none;
+	margin-top: 5%;
+	margin-bottom: 3%;
+}
+body img {
+	width: 100%;
+	float: none;
+	height: auto;
+}
+/*changes the paragraph style for small screen*/
+.paragraph p {
+	background-color: rgba(140,155,172,0.98);
+	text-align: center;
+	overflow-y: visible;
+	width: 100%;
+	border-radius: none;
+	padding-left: 1%;
+	padding-right: 1%;
+	margin-left: none;
+	margin-right: none;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	clear: none;
+	overflow-x: visible;
+	float: none;
+	height: auto;
+}
+	
 }
