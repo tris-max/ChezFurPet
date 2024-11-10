@@ -1,12 +1,90 @@
-<!doctype html>
-<main>Contact</main>
-<nav>
-    <ul>  
-       <li><a href="Home.html">Home</a></li>
-       <li><a href="Menu.html">Menu</a></li>
-       <li><a href="Your Hosts.html">Your Hosts</a></li> 
-		<li><a href="AboutCats.html">AboutCats</a></li>
-       <li><a href="Contact.html">Contact</a></li>
-       <li><a href="Adoptions.html">Adoptions</a></li>
-   </ul>   
-   </nav>
+<!DOCTYPE html>
+<main>
+    <head> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel="Stylesheet" href="Chezfur.css" >
+    
+        <title>Chez Fur</title> <!-- Title of the website -->
+    
+        <meta http-equiv="content-type" 
+        content="text/html; charset= UTF-8">
+        <header>
+            <h1>Chez Fur </h1>
+        </header>
+    
+        <nav>
+            <ul>  
+               <li><a href="Home.html">Home</a></li>
+               <li><a href="Menu.html">Menu</a></li>
+               <li><a href="Your Hosts.html">Your Hosts</a></li> 
+				<li><a href="AboutCats.html">AboutCats</a></li>
+               <li><a href="Contact.html">Contact</a></li>
+               <li><a href="Adoptions.html">Adoptions</a></li>
+               <li><a href="index.html">Index</a></li>
+           </ul>   
+           </nav>
+     <h1>Fill Out the form below  with your details and we will get back to you ASAP!</h1>      
+    </head>
+</main>  
+<body>   
+<form>
+    <!-- form section for name input-->
+    <label for ="name"> Name:</label>
+    <input type = "text" id="name" required>
+    <!-- form section for email input-->
+     
+    <label for ="email"> Email:</label>
+    <input type="email" id="email" name="email" placeholder="sunshine123@gmail.com">
+
+    <!-- form section for phone number input-->
+    <label for ="phone"> Phone:</label>
+    <input type = "tel" id="Phone" required placeholder="999-999-9999">
+
+    <!-- form section for Preferred contact input-->
+    <label for="select">Preferred Contact:</label>
+      <select name="contact" id="contact">
+         <option value="Email me">Email me</option>
+         <option value="Phone me between 1pm-4pm">Phone me between 1pm-4pm</option>
+         <option value="Phone me between 6pm-9pm">Phone me between 6pm-9pm</option>
+     </select>
+    
+    <label for="textarea">Question or Concern:</label> <!-- form section to write questions or concerns if any-->
+    <textarea id="textarea" name="textarea" rows="4" cols="50" input type="textarea">
+        Drop your question or concern here!
+     </textarea>
+
+    <!--This creats a submit button-->
+    <input type="submit">
+</form>  
+<p id="Date"></p>
+<script>
+    const d = new Date();
+    document.getElementById("Date").innerHTML = d;
+    </script>
+<!-- Address section -->
+<h4>Chez Fur Headquarters</h4>
+1234 Pet Avenue <br>
+Pet City, PC 56789 <br>
+Phone: (555) 123-4567 <br> 
+</body>
+</html> 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
