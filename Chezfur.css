@@ -257,6 +257,7 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: hsl(69, 40%, 45%);
 }
+
 /* Apply media query for larger screens (min-width: 750px) */
 @media screen and (min-width: 750px) {
   .columns-wrapper{
